@@ -301,10 +301,34 @@ console.log("Es.12:", newMillenialFilms(movies));
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 
+const sumYearFilms = function(array)
+{
+  const sumYears = array.reduce((somma, anni) => (somma += parseInt(anni.Year)));
+  return sumYears;
+}
+
+console.log("Es.13:", sumYearFilms(movies));
+
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 
+const searchFilmsById = function(array, id)
+{
+  const search = array.find((element) => (element.imdbID === id));
+  return search;
+}
+
+console.log("Es.14:", searchFilmsById(movies, 'tt4154796'));
+
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+
+const searchFilmsByYear = function(array, year)
+{
+  const search = array.findIndex((element) => (element.Year === year));
+  return search;
+}
+
+console.log("Es.15:", searchFilmsByYear(movies, '2002'));
