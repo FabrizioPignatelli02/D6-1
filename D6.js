@@ -289,6 +289,14 @@ console.log("Es.11:", createTitleArray(movies));
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
+const newMillenialFilms = function(array)
+{
+  const newArrayMillenial = array.filter((array) => (array.Year > 2000));
+  return newArrayMillenial;
+}
+
+console.log("Es.12:", newMillenialFilms(movies));
+
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
