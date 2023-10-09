@@ -303,8 +303,9 @@ console.log("Es.12:", newMillenialFilms(movies));
 
 const sumYearFilms = function(array)
 {
-  const sumYears = array.reduce((somma, anni) => (somma += parseInt(anni.Year)));
-  return sumYears;
+  const sumYears = array.reduce((somma, anni) => (somma += anni));
+  const number = parseInt(sumYears, 16);
+  return number;
 }
 
 console.log("Es.13:", sumYearFilms(movies));
