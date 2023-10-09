@@ -119,7 +119,6 @@ const lengthFunction = function (array)
   return newLengthArray;
 }
 
-// const newLengthArray = stringArray.map(lengthFunction);
 console.log("Es.7:",lengthFunction(stringArray));
 
 
@@ -278,14 +277,13 @@ console.log("Es.10 Ci sono in totale",numberOfFilms(movies),"film");
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 
-// const arrayOnlyFilms = () => {
-//   return movies.map((item) => {
-//     const newItem = Title;
-//     return newItem;
-//   });
-// };
+const createTitleArray = function(array)
+{
+  const newArrayTitle = array.map((array) => (array.Title));
+  return newArrayTitle;
+}
 
-// console.log(arrayOnlyFilms);
+console.log("Es.11:", createTitleArray(movies));
 
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
