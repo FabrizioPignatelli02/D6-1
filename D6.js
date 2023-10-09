@@ -76,16 +76,17 @@ console.log("Es.4:",sumArray(prova));
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
-let dif = 0;
 
-const difArray = function(diffTotal, numeri)
+
+const sommaArrayReduce = function(array)
 {
-  diffTotal -= numeri;
-  return diffTotal;
+  const somma = array.reduce((sommaArray, numeri) => (sommaArray += numeri));
+  return somma;
 }
 
 
-console.log("Es.5 Differenza:",prova.reduce(difArray));
+console.log("Es.5 Somma:",sommaArrayReduce(prova));
+
 
 
 
@@ -96,11 +97,11 @@ console.log("Es.5 Differenza:",prova.reduce(difArray));
 
 const incrementFunction = function (array, multi)
 {
-  const multiply = array.map(num=>num+multi);
+  const multiply = array.map((num) => (num+multi));
   return multiply;
 }
 
-console.log("Es.6:",incrementFunction(prova,2));
+console.log("Es.6:",incrementFunction(prova,10));
 
 
 
@@ -114,11 +115,12 @@ const stringArray = ["Fabrizio", "e", "Chiara"];
 
 const lengthFunction = function (array)
 {
-  return array.length;
+  const newLengthArray = stringArray.map((array) => (array.length))
+  return newLengthArray;
 }
 
-const newLengthArray = stringArray.map(lengthFunction);
-console.log("Es.7:",newLengthArray);
+// const newLengthArray = stringArray.map(lengthFunction);
+console.log("Es.7:",lengthFunction(stringArray));
 
 
 /* ESERCIZIO 8 (forEach o for)
