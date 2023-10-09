@@ -44,7 +44,7 @@ console.log("Es.2:", prova);
 
 const pariArray = function(array)
 {
-  const pariFiltrati = array.filter(element => element % 2 === 0);
+  const pariFiltrati = array.filter((element) => (element % 2 === 0));
   return pariFiltrati;
 }
 
@@ -55,15 +55,18 @@ console.log("Es.3:", pariArray(prova));
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
-let sum = 0;
 
-const sumArray = function(numeri)
+
+const sumArray = function(array)
 {
-  sum += numeri;
-  console.log("Es.4 Somma:",sum);
+  let sum = 0;
+  array.forEach((num) => (sum += num));
+  return sum;
 }
 
-prova.forEach(sumArray);
+console.log("Es.4:",sumArray(prova));
+
+
 
 
 
