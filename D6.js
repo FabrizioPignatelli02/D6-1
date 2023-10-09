@@ -9,10 +9,10 @@ const concatenare = function (string1, string2)
   const endString = string2.slice(string2.length - 3);
   const newString = startString.toUpperCase() + endString.toUpperCase();
 
-  return newString;
+  console.log("Es.1:",newString);
 }
 
-console.log("Es.1:",concatenare("fabrizio","chiara"));
+concatenare("fabrizio","chiara");
 
 
 
@@ -255,18 +255,7 @@ const movies = [
 */
 
 
-const filmVecchio = function (array)
-{
-  const annoBase = 2023;
-  if(array.Year<array.Year)
-  {
-    console.log(array.Title);
-  }
-}
 
-// movies.forEach(filmVecchio);
-
-// console.log(movies.forEach(filmVecchio));
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
