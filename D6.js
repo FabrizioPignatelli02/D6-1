@@ -85,9 +85,20 @@ const difArray = function(diffTotal, numeri)
 console.log("Es.5 Differenza:",prova.reduce(difArray));
 
 
+
+
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+
+const incrementFunction = function (array, multi)
+{
+  const multiply = array.map(num=>num+multi);
+  return multiply;
+}
+
+console.log("Es.6:",incrementFunction(prova,2));
+
 
 
 
@@ -96,9 +107,32 @@ console.log("Es.5 Differenza:",prova.reduce(difArray));
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
+const stringArray = ["Fabrizio", "e", "Chiara"];
+
+const lengthFunction = function (array)
+{
+  return array.length;
+}
+
+const newLengthArray = stringArray.map(lengthFunction);
+console.log("Es.7:",newLengthArray);
+
+
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+const newArrayDispari = [];
+
+for (let i=0; i<99; i++)
+{
+  if (i % 2 !== 0)
+  {
+    newArrayDispari[i] = i;
+  }
+
+}
+
+console.log("Es.8:",newArrayDispari);
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -220,13 +254,44 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
+
+const filmVecchio = function (array)
+{
+  const annoBase = 2023;
+  if(array.Year<array.Year)
+  {
+    console.log(array.Title);
+  }
+}
+
+// movies.forEach(filmVecchio);
+
+// console.log(movies.forEach(filmVecchio));
+
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
+const numberOfFilms = function (array)
+{
+  const films = array.length;
+  return films;
+}
+
+console.log("Es.10 Ci sono in totale",numberOfFilms(movies),"film");
+
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+
+// const arrayOnlyFilms = () => {
+//   return movies.map((item) => {
+//     const newItem = Title;
+//     return newItem;
+//   });
+// };
+
+// console.log(arrayOnlyFilms);
 
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
